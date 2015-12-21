@@ -58,8 +58,6 @@ For more simplification, you can add a twig extension.
 
 ##### Twig Extension
 
-In your folder `Bundle\Twig\`:
-
 ```php
 use Knp\Colorize\Colorize\MonokaiColorize;
 
