@@ -27,6 +27,8 @@ $message = '%pink[CREATE TEAM]% The Dream Team has been %greencreated%.'
 
 And give it to the theme you want:
 ```php
+use Knp\Colorize\Colorize\MonokaiColorize;
+
 $convertColor = new MonokaiColorize();
 
 return $convertColor->colour($message);
@@ -36,16 +38,15 @@ return $convertColor->colour($message);
 
 You also create your own theme by passing:
 ```php
+use Knp\Colorize\Colorize\EmptyColorize;
+
 $convertColor = new EmptyColorize();
 ```
 And add colors of your choice:
 ```php
+use Knp\Colorize\Color;
+
 $colorBlue = new Color();
 $colorBlue->setName('blue')->setHexadecimal('#01579B');
 $this->addColor($colorBlue);
-```
-
-The final step, sends to the view:
-```twig
-{{ message|raw }}
 ```
