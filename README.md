@@ -50,3 +50,56 @@ $colorBlue = new Color();
 $colorBlue->setName('blue')->setHexadecimal('#01579B');
 $this->addColor($colorBlue);
 ```
+
+Use with Twig Extension
+-----------------------
+
+For more simplification, you can add a twig extension.
+
+##### ConvertColorExtension
+
+In your folder `Bundle\Twig\`:
+
+```php
+use Knp\Colorize\Colorize\MonokaiColorize;
+
+class ConvertColorExtension extends \Twig_Extension
+{
+    public function convertColor($message)
+    {
+        $convertColor = new MonokaiColorize();
+
+        return $convertColor->colour($message);
+    }
+
+    public function getFunctions()
+    {
+        return [
+            'convert_color' => new \Twig_Function_Method($this, 'convertColor',
+                array('is_safe' => array('html'))
+            ),
+        ];
+    }
+
+    public function getName()
+    {
+        return 'app_convert_color';
+    }
+}
+```
+
+##### twig.convert_color
+
+```yml
+services:
+    twig.convert_color:
+        class: Bundle\Twig\ConvertColorExtension
+        tags:
+            - { name: twig.extension }
+```
+
+##### Twig view
+
+```twig
+{{ convert_color(log.message) }}
+```
