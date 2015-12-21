@@ -1,5 +1,5 @@
 {
-    "name": "knp/colorize",
+    "name": "knplabs/colorize",
     "require-dev": {
         "phpspec/phpspec": "^2.4"
     },
