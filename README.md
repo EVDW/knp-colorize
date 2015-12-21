@@ -4,7 +4,7 @@ Knp : Colorize
 Usage
 -----
 
-For guys who just need to colorize messages with simple tags.
+For guys who just need to colorize php messages with simple tags.
 
 Installation
 ------------
