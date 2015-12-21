@@ -99,5 +99,5 @@ services:
 ##### Twig view
 
 ```twig
-{{ convert_color(log.message) }}
+{{ convert_color(message) }}
 ```
