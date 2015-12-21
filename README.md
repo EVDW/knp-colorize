@@ -42,3 +42,8 @@ $colorBlue = new Color();
 $colorBlue->setName('blue')->setHexadecimal('#01579B');
 $this->addColor($colorBlue);
 ```
+
+The final step, sends to the view:
+```twig
+{{ message|raw }}
+```
