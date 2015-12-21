@@ -6,7 +6,7 @@ use Knp\Colorize\Color;
 
 class Convert
 {
-    public static function convertToObjects($arrayColors)
+    public static function convertToObjects(array $arrayColors)
     {
         foreach ($arrayColors as $key => $value) {
             $color = new Color();

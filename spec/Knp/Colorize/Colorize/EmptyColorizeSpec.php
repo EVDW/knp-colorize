@@ -3,6 +3,7 @@
 namespace spec\Knp\Colorize\Colorize;
 
 use Knp\Colorize\Color;
+use Knp\Colorize\Convert\Convert;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
@@ -26,6 +27,24 @@ class EmptyColorizeSpec extends ObjectBehavior
 
         $this->colour($message)->shouldReturn(
             '<span style="color:#01579B">[data]</span> Alfred Dupond a modifié(e) le <span style="color:#FD6767">titre</span>'
+        );
+    }
+
+    function it_convert_color_tag_with_array_convert()
+    {
+        $message = "%black[data]% Alfred Dupond a modifié(e) le %whitetitre%";
+
+        $colors = [
+            "black" => "#000000",
+            "white" => "#ffffff"
+        ];
+
+        foreach (Convert::convertToObjects($colors) as $colorObject) {
+            $this->addColor($colorObject);
+        }
+
+        $this->colour($message)->shouldReturn(
+            '<span style="color:#000000">[data]</span> Alfred Dupond a modifié(e) le <span style="color:#ffffff">titre</span>'
         );
     }
 }

@@ -50,3 +50,14 @@ $colorBlue = new Color();
 $colorBlue->setName('blue')->setHexadecimal('#01579B');
 $this->addColor($colorBlue);
 ```
+But, if you have a lot of colors, you can do this:
+```php
+$colorsArray = [
+    "black" => "#000000",
+    "white" => "#ffffff"
+];
+
+foreach (Convert::convertToObjects($colorsArray) as $colorObject) {
+    $this->addColor($colorObject);
+}
+```
