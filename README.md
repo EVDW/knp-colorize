@@ -56,7 +56,7 @@ Use with Twig Extension
 
 For more simplification, you can add a twig extension.
 
-##### ConvertColorExtension
+##### Twig Extension
 
 In your folder `Bundle\Twig\`:
 
@@ -88,7 +88,7 @@ class ConvertColorExtension extends \Twig_Extension
 }
 ```
 
-##### twig.convert_color
+##### Twig service
 
 ```yml
 services:
