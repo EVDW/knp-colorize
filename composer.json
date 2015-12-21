@@ -1,0 +1,17 @@
+{
+    "name": "knp/colorize",
+    "require-dev": {
+        "phpspec/phpspec": "^2.4"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {"psr-0": {"": "src"}},
+    "authors": [
+        {
+            "name": "Emma",
+            "email": "emmanuelle.collet@knplabs.com"
+        }
+    ],
+    "require": {}
+}
