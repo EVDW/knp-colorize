@@ -10,7 +10,6 @@ abstract class AbstractColorize implements Colorize
 
     public function __construct()
     {
-        //test
         $this->colors = [];
     }
 
