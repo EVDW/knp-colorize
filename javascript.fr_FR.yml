@@ -1,0 +1,17 @@
+booking:
+  step:
+    title_with_employee: '%date% avec %employee%'
+  unavailable: 'Aucune disponibilité pour ce jour'
+  error:
+    basic: 'Une erreur est survenue, avez-vous bien sélectionné une prestation ? Merci de recharger votre page'
+    availability: 'Cet horaire n''est plus disponible, merci de faire un autre choix'
+    try_again: 'Merci de ré-essayer dans un instant'
+    form:
+      email: 'Email non valide'
+      phone: 'Numéro non valide'
+      required_field: 'Champ obligatoire'
+date:
+  availability:
+    format: 'HH[h]mm'
+  selected:
+    format: 'dddd D MMMM [à] HH:mm'
